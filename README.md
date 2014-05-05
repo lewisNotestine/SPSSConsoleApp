@@ -20,3 +20,11 @@ This app provides a little demonstration of how one might use the API in C#. it 
 * A demo of listing variables
 * A demo of console output of frequencies
 
+Prerequisites
+===
+
+You will need (at least):
+
+* The .NET 3.5 Runtime
+* SPSS installed (this project is built for v22, but may work for others).
+* The SPSS .NET backend API installed (version-specific, and has to match your SPSS Version).
