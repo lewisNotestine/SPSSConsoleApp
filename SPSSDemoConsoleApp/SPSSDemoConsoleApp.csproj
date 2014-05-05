@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Models\SPSSDataset.cs" />
     <Compile Include="Models\SPSSVariable.cs" />
+    <Compile Include="Models\SPSSVariableBuilder.cs" />
     <Compile Include="SPSSWrapper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
