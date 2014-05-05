@@ -7,26 +7,26 @@ namespace SPSSDemoConsoleApp.Models {
     
     public class SPSSVariable {
 
-        public enum Scale { 
-            NOMINAL,
-            ORDINAL,
-            SCALE,
-            UNKNOWN
-        }
-
-        public enum VarType { 
-            NUMERIC,
-            STRING
-        }
-
-        public int ID { get; set; }
+        public int ID { get; private set; }
         public int Index { get; set; }
-        public string Name { get; set; }
-        public string Label { get; set; }
-        public Scale MeasurementScale { get; set; }
-        public Dictionary<int, string> NumValues { get; set; }
-        public HashSet<int> MissingValues { get; set; }
+        public string Name { get; private set; }
+        public string Label { get; private set; }
+        public string Scale { get; set; }
+        public int VarType { get; set; }
+        public Dictionary<double, string> NumValues { get; set; }
         public string VariableFormat { get; set; }
             
+        private SPSSVariable() {
+            NumValues = new Dictionary<double, string>();
+        }
+
+        public SPSSVariable(int index, string name, string label, string scale, int type, string format) : this() {
+            Index = index;
+            Name = name;
+            Label = label;
+            Scale = scale;
+            VarType = type;
+            VariableFormat = format;
+        }
     }
 }
