@@ -4,6 +4,14 @@ using System.Linq;
 using System.Text;
 
 namespace SPSSDemoConsoleApp {
+
+    /// <summary>
+    /// SPSS Demo Console App.
+    /// 
+    /// This is a demo application for showing how the SPSS API for .NET works. It is a convenient wrapper for programmatically wrapping SPSS functionality in a CLR environment.
+    /// This just loads a prepackaged default dataset, but can be configured to run whatever you want.
+    /// See API Doc at: ftp://public.dhe.ibm.com/software/analytics/spss/documentation/statistics/20.0/en/netplugin/Manuals/Microsoft_NET_User_Guide_for_IBM_SPSS_Statistics.pdf
+    /// </summary>
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Welcome to the SPSS dataset program. Loading default Dataset.\n\n");
@@ -37,10 +45,7 @@ namespace SPSSDemoConsoleApp {
                 } else {
                     Console.WriteLine("Invalid Input");
                 }
-                
-
             }
-
         }
     }
 }

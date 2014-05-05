@@ -7,6 +7,11 @@ using SPSS.BackendAPI.Controller.ErrorCode;
 
 namespace SPSSDemoConsoleApp.Models {
     
+        /// <summary>
+        /// Class for abstracting out the properties of the entire dataset.
+        /// Main responsibilities are wrapping collections of variables by their numeric index, and by name.
+        /// The SPSS API does not provide the latter function by default, so that is important here.
+        /// </summary>
         public class SPSSDataset {
             public int ID;
             public SortedDictionary<int, SPSSVariable> SPSSVariables { get; private set; }

@@ -4,8 +4,11 @@ using System.Linq;
 using System.Text;
 
 namespace SPSSDemoConsoleApp.Models {
-    class SPSSVariableBuilder {
 
+    /// <summary>
+    /// Class for building the SPSS variable. Implements the Builder pattern to guard against the Telescoping Constructor anti-pattern.
+    /// </summary>
+    class SPSSVariableBuilder {
 
         public int Index { get; set; }
         public string Name { get; private set; }
@@ -34,7 +37,8 @@ namespace SPSSDemoConsoleApp.Models {
 
             throw new InvalidOperationException("Call to SPSSVariableBuilder.Build() without setting valid parameters");
         }
-
+       
+        #region BuilderSpecificationMethods
         public SPSSVariableBuilder WithIndex(int index) {
             Index = index;
             return this;
@@ -69,6 +73,8 @@ namespace SPSSDemoConsoleApp.Models {
             NumValues[value] = label;
             return this;
         }
+
+        #endregion
 
 
         /// <summary>
