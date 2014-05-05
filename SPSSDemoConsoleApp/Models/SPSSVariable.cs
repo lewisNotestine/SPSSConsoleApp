@@ -5,6 +5,9 @@ using System.Web;
 
 namespace SPSSDemoConsoleApp.Models {
     
+    /// <summary>
+    /// Class for abstracting out the properties of an SPSS variable as given by the API
+    /// </summary>
     public class SPSSVariable {
 
         public int ID { get; private set; }
